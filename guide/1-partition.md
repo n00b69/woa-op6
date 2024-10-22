@@ -11,7 +11,7 @@
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
   
-- [Modded TWRP](https://github.com/n00b69/woa-op6/releases/tag/Recovery)
+- [Modded TWRP](https://github.com/n00b69/woa-op6/releases/download/Files/TWRP-OP6xT.img)
 
 ### Notes
 > [!WARNING]  
