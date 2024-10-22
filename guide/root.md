@@ -9,7 +9,7 @@
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-- [TWRP](https://github.com/n00b69/woa-op6/releases/tag/Recovery)
+- [TWRP](https://github.com/n00b69/woa-op6/releases/download/Files/TWRP-OP6xT.img)
 
 #### Boot the recovery
 > Open a CMD window inside the platform-tools folder, then (while your phone is in fastboot mode) run
