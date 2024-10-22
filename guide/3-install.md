@@ -11,7 +11,7 @@
   
 - [UEFI image](https://github.com/n00b69/woa-op6/releases/tag/UEFI)
 
-- [Modded TWRP](https://github.com/n00b69/woa-op6/releases/tag/Recovery)
+- [Modded TWRP](https://github.com/n00b69/woa-op6/releases/download/Files/TWRP-OP6xT.img)
 
 ### Boot to TWRP
 > Replace `path\to\twrp-op6xt.img` with the actual path of the UEFI image
