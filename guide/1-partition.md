@@ -68,9 +68,6 @@ adb pull /dev/block/by-name/boot_a boot.img
 ```cmd
 adb shell partition $
 ```
-### Formatting data
-- Format all data in TWRP, or Android will not boot.
-- ( Go to Wipe > Format data > type yes )
 
 ### Check if Android still starts
 - Just restart the phone, and see if Android still works
