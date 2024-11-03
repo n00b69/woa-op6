@@ -36,24 +36,24 @@ adb shell parted /dev/block/sda
 ```
 
 #### Delete Windows Partition
-> Use `print all` to make sure that partition 36 is Windows
+> Use `print all` to make sure that partition 19 is Windows
 ```sh
-rm 36
+rm 19
 ```
 
 #### Delete ESP Partition
-> Use `print all` to make sure that partition 35 is ESP
+> Use `print all` to make sure that partition 18 is ESP
 ```sh
-rm 35
+rm 18
 ```
 
 #### Resize userdata Partition
-> Use `print all` to make sure that partition 34 is userdata
+> Use `print all` to make sure that partition 17 is userdata
 >
-> Replace **127GB** with the end value of your disk, use `p free` to find it
+> Replace **125GB** with the end value of your disk, use `p free` to find it
 ```sh
-resizepart 34
-127GB
+resizepart 17
+125GB
 ```
 
 #### Exit Parted
