@@ -2,44 +2,75 @@
 
 # Running Windows on the OnePlus 6 / 6T
 
-## Uninstallation
-
-### Why is this needed?
-If you want to uninstall windows this is used instead of deleting partitions manually to avoid human error + writing a whole dedicated guide to just uninstalling.
-
-If you want to relock your bootloader you'll need your partition table to be stock.
+## Uninstalling Windows
 
 ### Prerequisites
-
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
-  
-- [gpt_both0.bin]() FILE NEEDED
 
-### Uninstall instructions
-> [!Important]
-> This guide will likely not work, it needs to be updated
+- [Modified TWRP](https://github.com/n00b69/woa-op6/releases/download/Files/TWRP-OP6xT.img)
 
-#### Boot into fastboot mode
-> Hold the volume down + power button while the phone is turned off, or run the following command while it is booted
+### Opening CMD as an admin
+> Download **platform-tools** and extract the folder somewhere, then open CMD as an **administrator**.
+>
+> It is recommended to keep this window open and use it throughout the entire guide.
+> 
+> Replace `path\to\platform-tools` with the actual path to the platform-tools folder, for example **C:\platform-tools**.
 ```cmd
-adb reboot bootloader
+cd path\to\platform-tools
 ```
 
-#### Restore GPT
-> Replace ```path\to\gpt_both0.bin``` with the path to the gpt_both0.bin file.
-
+### Boot the modified recovery
+> While in fastboot mode, replace `path\to\twrp.img` with the actual path of the image
 ```cmd
-fastboot flash partition:0 path\to\gpt_both0.bin
+fastboot boot path\to\twrp.img
 ```
 
-#### Erase userdata to avoid a bootloop and restore FS size
+#### Unmount data
 ```cmd
-fastboot -w
+adb shell umount /dev/block/by-name/userdata
 ```
-> [!Note]
-> If erasing userdata fails, reboot to recovery and wipe all data there instead
+
+### Run parted
+```cmd
+adb shell parted /dev/block/sda
+```
+
+#### Delete Windows Partition
+> Use `print all` to make sure that partition 36 is Windows
+```sh
+rm 36
+```
+
+#### Delete ESP Partition
+> Use `print all` to make sure that partition 35 is ESP
+```sh
+rm 35
+```
+
+#### Resize userdata Partition
+> Use `print all` to make sure that partition 34 is userdata
+>
+> Replace **127GB** with the end value of your disk, use `p free` to find it
+```sh
+resizepart 34
+127GB
+```
+
+#### Exit Parted
+```sh
+quit
+```
+
+### Format data
+- Go to the Wipe menu in TWRP and press Format Data, then type `yes`
+
+#### Check if Android boots
+- Reboot your device and check if Android boots.
 
 ## Finished!
+
+
+
 
 
 
