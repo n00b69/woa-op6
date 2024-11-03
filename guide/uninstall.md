@@ -51,8 +51,12 @@ rm 18
 > Use `print all` to make sure that partition 17 is userdata
 >
 > Replace **125GB** with the end value of your disk, use `p free` to find it
+>
+> These are two different commands, run them seperately
 ```sh
 resizepart 17
+```
+```cmd
 125GB
 ```
 
