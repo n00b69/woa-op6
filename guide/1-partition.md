@@ -37,6 +37,9 @@ cd path\to\platform-tools
 > 
 > If you don't use it and you face any errors, consider it your fault and consider yourself alone if you try asking for support as you have deferred from the main guide.
 
+> [!Note]
+> If your device is not detected in fastboot or recovery mode, you'll have to install USB drivers [using this guide](troubleshooting.md#device-is-not-recognized-in-fastboot-or-recovery)
+
 #### Boot the modded recovery
 > While in fastboot mode, replace `path\to\twrp.img` with the actual path of the image
 ```cmd
