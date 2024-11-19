@@ -5,6 +5,14 @@
 ## Troubleshooting Issues
 > Below you will find a list of common problems and their solutions
 
+## Device is not recognized in fastboot or recovery
+> This likely means you don't have (proper) USB drivers installed
+- Download [QUD.zip](https://github.com/n00b69/woa-betalm/releases/download/Qfil/QUD.zip) here and extract it.
+- Open Device Manager and find an unknown device or device with errors that may be called **Android**, **ADB Interface**, or **QUSB_BULK**.
+- Right click this devjce, select "Update Drivers" > "Browse files", then select the **QUD folder** you extracted before.
+
+##### Finished!
+
 ## Cannot mount Windows in Android
 > This is caused when you shut down Windows instead of restarting it.
 - To solve this, boot to Windows and then press "restart", then as the screen shuts off boot to TWRP and from there load up Android.
