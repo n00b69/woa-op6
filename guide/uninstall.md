@@ -9,15 +9,9 @@
 
 - [Modified TWRP](https://github.com/n00b69/woa-op6/releases/download/Files/TWRP-OP6xT.img)
 
-### Opening CMD as an admin
-> Download **platform-tools** and extract the folder somewhere, then open CMD as an **administrator**.
->
-> It is recommended to keep this window open and use it throughout the entire guide.
-> 
-> Replace `path\to\platform-tools` with the actual path to the platform-tools folder, for example **C:\platform-tools**.
-```cmd
-cd path\to\platform-tools
-```
+### Switch to Android
+> Or your device will not boot into Android after uninstalling Windows
+- Run the **Switch to Android** or **Android** shortcut on your desktop, or flash a **boot.img** backup in fastboot/recovery.
 
 ### Boot the modified recovery
 > While in fastboot mode, replace `path\to\twrp.img` with the actual path of the image
@@ -25,51 +19,10 @@ cd path\to\platform-tools
 fastboot boot path\to\twrp.img
 ```
 
-#### Unmount data
+### Execute the restore script
 ```cmd
-adb shell umount /dev/block/by-name/userdata
+adb shell restore
 ```
-
-### Run parted
-```cmd
-adb shell parted /dev/block/sda
-```
-
-#### Delete Windows Partition
-> Use `print all` to make sure that partition 19 is Windows
-```sh
-rm 19
-```
-
-#### Delete ESP Partition
-> Use `print all` to make sure that partition 18 is ESP
-```sh
-rm 18
-```
-
-#### Resize userdata Partition
-> Use `print all` to make sure that partition 17 is userdata
->
-> Replace **125GB** with the end value of your disk, use `p free` to find it
->
-> These are two different commands, run them seperately
-```sh
-resizepart 17
-```
-```cmd
-125GB
-```
-
-#### Exit Parted
-```sh
-quit
-```
-
-### Format data
-- Go to the Wipe menu in TWRP and press Format Data, then type `yes`
-
-#### Check if Android boots
-- Reboot your device and check if Android boots.
 
 ## Finished!
 
