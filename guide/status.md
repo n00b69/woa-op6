@@ -6,7 +6,8 @@
 The project is in development. Expect some updates in the future.
 
 #### Features
-- [ ] Audio 
+- [ ] Audio (Speakers)
+- [ ] Audio (3.5mm) ```only present on OnePlus 6```
 - [X] Battery status
 - [x] Bluetooth
 - [x] Brightness 
@@ -16,7 +17,7 @@ The project is in development. Expect some updates in the future.
 - [x] Display
 - [x] GPU  ```No x64 acceleration```
 - [x] Touchscreen
-- [x] SMS ```SIM required```
+- [ ] SMS
 - [x] UFS
 - [x] USB
 - [x] Wi-Fi
