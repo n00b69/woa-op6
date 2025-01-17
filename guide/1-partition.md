@@ -59,7 +59,7 @@ cmd /c "for %i in (fsg,fsc,modemst1,modemst2) do (adb shell dd if=/dev/block/by-
 #### Backing up your boot image
 > This will back up your boot image in the current directory
 ```cmd
-adb pull /dev/block/by-name/boot$(getprop ro.boot.slot_suffix) boot.img
+adb pull /dev/block/by-name/boot_a boot.img
 ```
 
 ### Partitioning your device
