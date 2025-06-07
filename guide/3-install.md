@@ -5,15 +5,15 @@
 ## Installing Windows
 
 ### Prerequisites
+- [Modded TWRP](https://github.com/n00b69/woa-op6/releases/download/Files/TWRP-OP6xT.img)
+
 - [Windows on ARM image](https://arkt-7.github.io/woawin/)
   
 - [Drivers](https://github.com/n00b69/woa-op6/releases/tag/Drivers)
   
 - [UEFI image](https://github.com/n00b69/woa-op6/releases/tag/UEFI)
 
-- [Modded TWRP](https://github.com/n00b69/woa-op6/releases/download/Files/TWRP-OP6xT.img)
-
-### Boot to TWRP
+### Boot into TWRP
 > Replace `path\to\twrp-op6xt.img` with the actual path of the TWRP image
 ```cmd
 fastboot boot path\to\twrp-op6xt.img
@@ -24,6 +24,9 @@ fastboot boot path\to\twrp-op6xt.img
 ```cmd
 adb shell msc
 ```
+
+> [!Note]
+> If you are facing issues (e.g your device does not enter mass storage mode), follow [the steps described in this guide](/guide/troubleshooting.md#mass-storage-mode-does-not-work) for alternative ways of entering mass storage mode.
 
 ### Diskpart
 > [!WARNING]
