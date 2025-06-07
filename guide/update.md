@@ -25,6 +25,9 @@ fastboot boot path\to\twrp-op6xt.img
 adb shell msc
 ```
 
+> [!Note]
+> If you are facing issues (e.g your device does not enter mass storage mode), follow [the steps described in this guide](/guide/troubleshooting.md#mass-storage-mode-does-not-work) for alternative ways of entering mass storage mode.
+
 ### Diskpart
 ```cmd
 diskpart
