@@ -5,6 +5,18 @@
 ## Troubleshooting Issues
 > Below you will find a list of common problems and their solutions
 
+## Mass storage mode does not work
+> If mass storage mode in the modified recovery does not work, try the below method
+- Reboot back into fastboot mode and download the UEFI image.
+- Run the below command, replacing `path\to\uefi.img` with the actual path of the image.
+```cmd
+fastboot boot path\to\uefi.img
+```
+- Once booted into the image, select **UEFI Boot Menu** using your **volume buttons**.
+- Select **USB Attached SCSI (UAS) Storage**.
+- Press the **power** button twice to confirm.
+- Proceed with the Diskpart steps now.
+
 ## LTE and other network services in Android no longer work
 > Sometimes Windows may wipe your modem partitions, resulting in the loss of LTE in Android. To fix this, you'll need to restore your modem using the backups that you hopefully made [while partitioning your device](1-partition.md#backing-up-important-files). If you did not do this step, there is likely no way to recover.
 - Boot into any recovery other than the stock recovery (ADB commands do not work there)
