@@ -33,6 +33,8 @@ This project is in an early stage, all the files here have been contributed by o
 
 
 ## Maintainers
+[<img alt="Project Aloha" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/118143494?s=200&v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Project-Aloha)
+[<img alt="Arminas" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/72100724?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/arminask)
 [<img alt="Daniel224455" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/90069111?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Daniel224455)
 
 ## Contributors
